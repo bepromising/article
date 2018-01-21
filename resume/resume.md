@@ -19,7 +19,7 @@
 7. 了解 *mv** 的框架模式，且熟练使用 `vue` 。
 8. 熟悉 `node` 的运用和操作。
 9. 熟悉使用 **git** 和 **Linux** 。
-10. 常逛 *segmentfault* 社区，有自己的个人博客。
+10. 常逛 *segmentfault* 社区，有自己的[博客][2]。
 11. 平时喜欢看书，学习，运动。
 
 ## 工作经历
@@ -40,3 +40,4 @@
 4. 所用技术：`VUE全家桶` ，`webpack` ，`babel` ，`scss` ，`node` ，`饿了么UI组件库` 。
 
 [1]: shijiehuo.png
+[2]: https://segmentfault.com/blog/bepromising-sgf
