@@ -6,28 +6,24 @@
   <tr>
     <td><b>姓名</b></td>
     <td>林晨希</td>
-    <td></td>
     <td><b>电话</b></td>
     <td>13727780731</td>
   </tr>
   <tr>
     <td><b>邮箱</b></td>
     <td>dream_cxi@163.com</td>
-    <td></td>
     <td><b>目前所在城市</b></td>
     <td>广东东莞</td>
   </tr>
   <tr>
     <td><b>毕业时间</b></td>
     <td>2017</td>
-    <td></td>
     <td><b>毕业学校</b></td>
     <td>佛山职业技术学院</td>
   </tr>
   <tr>
     <td><b>学历</b></td>
     <td>大专</td>
-    <td></td>
     <td><b>专业</b></td>
     <td>物联网应用技术</td>
   </tr>
