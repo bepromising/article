@@ -16,7 +16,7 @@
 4. 熟悉 **http协议** 和 了解 **tcp/ip协议** 的工作原理。
 5. 熟悉前端工具：`webpack` ，`babel` ，`mocha`。
 6. 熟悉 *css* 预处理器：`scss` ，`less` ，`postcss`。
-7. 熟悉 *mv** 的框架模式，且熟练使用 vue 。
+7. 了解 *mv** 的框架模式，且熟练使用 `vue` 。
 8. 熟悉 `node` 的运用和操作。
 9. 熟悉使用 **git** 和 **Linux** 。
 10. 常逛 *segmentfault* 社区，有自己的个人博客。
