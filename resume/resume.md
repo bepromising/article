@@ -63,5 +63,10 @@
 3. 负责部门响应式官网开发。
 4. 所用技术：`VUE全家桶` ，`webpack` ，`babel` ，`scss` ，`node` ，`饿了么UI组件库` 。
 
+![东家后台图片][3]
+![东家后台图片_2][4]
+
 [1]: shijiehuo.png
 [2]: https://segmentfault.com/blog/bepromising-sgf
+[3]: MD.png
+[4]: md_2.png
