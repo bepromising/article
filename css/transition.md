@@ -16,7 +16,7 @@
   ```
 
   其各项的作用：
-  | | 值 |默认值| 作用 |
+  | @ | 值 |默认值| 作用 |
   | -- | -- | :--: | -- |
   | **property** | none / all / [property](#property) | all | 作用于需要过渡的属性 |
   | **duration** | [time](#time) | 0 | 过渡所需时间 |
