@@ -6,10 +6,12 @@
   >  ***transitions*** 提供了一种在更改 *CSS* 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效  的。（摘自[MDN][1]）
   
 ## 用法
+
   - 其写法（为了兼容，要加厂商前缀，这里不写咯）：
   ```
   transition: <property> <duration> <timing-function> <delay>
   ```
+  <br/>
 
   - 也可以用逗号隔开，多写几个作用于不用的 **property**（属性）
   ```
@@ -17,13 +19,13 @@
   ```
 ## 各项作用
 
-  | @ | 值 |默认值| 作用 |
-  | -- | -- | :--: | -- |
-  | **property** | none / all / [property](#property) | all | 作用于需要过渡的属性 |
-  | **duration** | [time](#time) | 0 | 过渡所需时间 |
-  | **timing-function** | linear / ease / ease-in / ease-out / ease-in-out / [cubic-bezier(n,n,n,n)](#bezier) | ease | 规定过渡效果的速度曲线 |
-  | **delay** | time (同*duration*) | 0 | 延迟多久才开始过渡 |
-
+   @ | 值 |默认值| 作用 
+   -- | -- | :--: | -- 
+   **property** | none / all / [property](#property) | all | 作用于需要过渡的属性 
+   **duration** | [time](#time) | 0 | 过渡所需时间 
+   **timing-function** | linear / ease / ease-in / ease-out / ease-in-out / [cubic-bezier(n,n,n,n)](#bezier) | ease | 规定过渡效果的速度曲线 
+   **delay** | time (同*duration*) | 0 | 延迟多久才开始过渡 
+  <br/>
 
   1.  <b id="property">property</b>：可过渡的 CSS 属性，有些属性则不行。
   2.  <b id="time">time</b>：以秒（如`1s`）或毫秒（如`1000`）计。
@@ -61,6 +63,9 @@
 
   # 未完!
 
-  [1]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
-  [2]: https://codepen.io/anon/pen/jYozwM
-  [3]: https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#%E4%B8%89%E6%AC%A1%E6%96%B9%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
+
+
+
+[1]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+[2]: https://codepen.io/anon/pen/jYozwM
+[3]: https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#%E4%B8%89%E6%AC%A1%E6%96%B9%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
