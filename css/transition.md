@@ -33,9 +33,10 @@
 
 # 动手使用下
 
-  先上一段代码
+## 基本操作
+
   ```
-  // style
+  // css
   #box {
     width: 100px;
     height: 100px;
@@ -61,6 +62,93 @@
   * **all** ： 所有可过渡的属性都可以的意思。
   * **1s** ： 在第二项，即 `duration` 。过渡所需时间。
 
+## 简单的类似图片无缝滑动
+
+  ```
+  // css
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #box {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    
+  }
+
+  #img_container {
+    position: relative;
+    width: 400px;
+    transition: all .7s linear;
+    -webkit-transition: all .7s linear;
+    -moz-transition: all .7s linear;
+    -ms-transition: all .7s linear;
+    -o-transition: all .7s linear;
+  }
+
+  #img_container span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: yellow;
+  }
+
+  #img_container span:nth-of-type(even) {
+    background-color: red;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+  }
+
+// html
+  <div id="box">
+    <section id="img_container">
+       <span>1</span><span>2</span><span>3</span><span>4</span>
+    </section>
+  </div>
+  <ul>
+    <li>图一</li>
+    <li>图二</li>
+    <li>图三</li>
+    <li>图四</li>
+  </ul>
+
+  // js
+  ~function () {
+      let lis    = document.getElementsByTagName('li');
+      let imgBox = document.getElementById('img_container');
+      let width  = +document.querySelector('span').clientWidth;
+      
+      for (let j = 0;j < lis.length;j++) {
+        
+        lis[j].addEventListener('click',function() {
+          imgBox.style.marginLeft = `-${ width * j }px`;
+        });
+
+      }
+
+  }()
+  ```
+
+## 滚动到某个位置，动画才出现
+
+  * 直接看[在线demo][4]。
+  * 这个 demo 是用 **js** 改变了 **property** ，从而触发 `transition`。
+  
+
   # 未完!
 
 
@@ -69,3 +157,4 @@
 [1]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 [2]: https://codepen.io/anon/pen/jYozwM
 [3]: https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#%E4%B8%89%E6%AC%A1%E6%96%B9%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
+[4]: https://codepen.io/anon/pen/eywmEP
