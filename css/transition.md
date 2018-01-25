@@ -29,7 +29,7 @@
 
   1.  <b id="property">property</b>：可过渡的 CSS 属性，有些属性则不行。
   2.  <b id="time">time</b>：以秒（如`1s`）或毫秒（如`1000`）计。
-  3.  <b id="bezier">cubic-bezier(x1,y1,x2,y2)</b>：[三阶贝塞尔曲线][3]。*linear* ，*ease* 等等都是由它计算出来的。**x轴** 的取值范围：[0,1] 区间内, **y轴** 可以任意值。
+  3.  <b id="bezier">cubic-bezier(x1,y1,x2,y2)</b>：[三阶贝塞尔曲线][3]。*linear* ，*ease* 等等都是由它计算出来的。**x轴** 的取值范围：[0,1] 区间内, **y轴** 可以任意值。可[在线自定义][5] 。
 
 # 动手使用下
 
@@ -148,8 +148,78 @@
   
 ## 滚动到某个位置，动画才出现
   
+  ```
+  // css
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-  # 未完!
+  body {
+    height: 1500px;
+  }
+
+
+  #box {
+    height: 1200px;
+    text-align: center;
+    /* background-color: aqua; */
+  }
+
+  #animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: transform 1s cubic-bezier(.1,1.92,.71,.53);
+    -webkit-transition: transform 1s cubic-bezier(.1,1.92,.71,.53);
+    -moz-transition: transform 1s cubic-bezier(.1,1.92,.71,.53);
+    -ms-transition: transform 1s cubic-bezier(.1,1.92,.71,.53);
+    -o-transition: transform 1s cubic-bezier(.1,1.92,.71,.53);
+  }
+
+  // html
+  <div id="box">
+    请往下滚动到有动画的地方，或者点击 <a href="#here">这里</a>
+  </div>
+  <span id="here"></span>
+  <div id="animation"></div>
+
+  // js 
+  let animation = function () {
+      let animationBox = document.getElementById('animation');
+
+      function show () {
+        animationBox.style.transform = 'translateX(600px) scale(3,3) rotate(360deg)';
+      }
+
+      function init () {
+        animationBox.style.transform = 'translateX(0) scale(1,1) rotate(-360deg)';
+      }
+
+      return { show, init };
+    }()
+
+    window.onscroll = function () {
+      let scrollTop = +window.scrollY;
+
+      if (scrollTop > 840) {
+        animation.show();
+      } else {
+        animation.init();
+      }
+    }
+  ```
+
+  * [在线demo][6] 。
+  * 因为主要演示动画，所以没写滚动的节流或防抖了 。
+  * 当滚动或点击到动画的位置，动画才开始。
+  * 在 *css* 代码可以看到，`transition` 要通过 `transform` 的变化来触发。同时我也用到了 *[cubic-bezier](#bezier)* 。
+
+# 最后
+
+  这里不深入讲解 *cubic-bezier* ，因为我看原理也是头晕。。。。  
+  `transition` 还可以实现很多功能，*淡出淡入* ， *手风琴效果* 等等。等着你们去发现。
+  其实动画不是特别难的，只要你有颗 骚动（好奇）的心。
 
 
 
@@ -158,3 +228,5 @@
 [2]: https://codepen.io/anon/pen/jYozwM
 [3]: https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#%E4%B8%89%E6%AC%A1%E6%96%B9%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
 [4]: https://codepen.io/anon/pen/eywmEP
+[5]: http://yisibl.github.io/cubic-bezier/#.17,.67,.83,.67
+[6]: https://codepen.io/anon/pen/jYozwM
