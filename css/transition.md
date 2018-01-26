@@ -56,7 +56,7 @@
   // html
   <div id="box"></div>
   ```
-  <!-- * [在线demo][2] -->
+  ![效果图][2]
   * `#box`的 *style* 里有`transition`，要触发它，则需要改变上面所说的 [property](#property) 。
   * 当鼠标移到 `div` 时，`width` 和 `marin-top` 发生了变化，触发了 `transition` 。
   * **all** ： 所有可过渡的属性都可以的意思。
@@ -143,7 +143,7 @@
   }()
   ```
 
-  <!-- * 直接看[在线demo][4]。 -->
+  ![效果图][4]。
   * 这个 demo 是用 **js** 改变了 **property** ，从而触发 `transition`。
   
 ## 滚动到某个位置，动画才出现
@@ -163,7 +163,6 @@
   #box {
     height: 1200px;
     text-align: center;
-    /* background-color: aqua; */
   }
 
   #animation {
@@ -202,7 +201,7 @@
     window.onscroll = function () {
       let scrollTop = +window.scrollY;
 
-      if (scrollTop > 840) {
+      if (scrollTop > 650) {
         animation.show();
       } else {
         animation.init();
@@ -210,7 +209,7 @@
     }
   ```
 
-  <!-- * [在线demo][6] 。 -->
+  ![在线demo][6] 。
   * 因为主要演示动画，所以没写滚动的节流或防抖了 。
   * 当滚动或点击到动画的位置，动画才开始。
   * 在 *css* 代码可以看到，`transition` 要通过 `transform` 的变化来触发。同时我也用到了 *[cubic-bezier](#bezier)* 。
@@ -225,5 +224,8 @@
 
 
 [1]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+[2]: ./gif/transition-demo1.gif
 [3]: https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#%E4%B8%89%E6%AC%A1%E6%96%B9%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
+[4]: ./gif/transition-demo2.gif
 [5]: http://yisibl.github.io/cubic-bezier/#.17,.67,.83,.67
+[6]: ./gif/transition-demo3.gif
