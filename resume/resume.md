@@ -12,7 +12,7 @@
   <tr>
     <td><b>邮箱</b></td>
     <td>dream_cxi@163.com</td>
-    <td><b>目前所在城市</b></td>XiXiArthurs_X1XiXiArthurs_X1XiXiArthurs_X1XiXiArthurs_X1XiXiArthurs_X1
+    <td><b>目前所在城市</b></td>
     <td>广东东莞</td>
   </tr>
   <tr>
