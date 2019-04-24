@@ -88,7 +88,7 @@
 2. 主要制作大数据分析应用系统，用作数据可视化大屏展示。
 3. 所用技术：`VUE全家桶` ，`webpack` ，`babel` ，`scss` ，`node` ，`Iview UI组件库`，`Typescript`，`Echarts4.0`，`百度地图`  
 
-***由于都是政府项目，没有图片***
+***没有图片***
 
 
 [1]: shijiehuo.png
