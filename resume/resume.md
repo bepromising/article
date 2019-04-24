@@ -58,6 +58,10 @@
 - 不同的项目经理只能看自己项目组的周报。
 - 项目工时统计。
 - 上周未填周报的成员会在登录后受到提示。
+  
+![天道1][5]
+![天道2][6]
+![天道3][7]
 
 ## 工作经历
 
@@ -91,3 +95,6 @@
 [2]: https://segmentfault.com/blog/bepromising-sgf
 [3]: MD.png
 [4]: md_2.png
+[5]: tiandao1.png
+[6]: tiandao2.png
+[7]: tiandao3.png
